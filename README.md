@@ -1,2 +1,0 @@
-# adeshtrivedi.github.io
-Portfolio
