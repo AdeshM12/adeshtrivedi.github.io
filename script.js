@@ -36,3 +36,16 @@ try {
   window.location.href = `mailto:adeshtrivedi01@gmail.com?subject=${subject}&body=${body}`;
 }
 
+const toggle = document.querySelector(".nav-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+toggle.addEventListener("click", () => {
+  navLinks.classList.toggle("open");
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+  });
+});
+
