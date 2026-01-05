@@ -56,3 +56,16 @@ function sendEmail(event) {
 
   window.open(gmailURL, "_blank");
 }
+
+
+
+/* ===== PAGE LOADER CONTROL ===== */
+window.addEventListener("load", () => {
+  const loader = document.getElementById("page-loader");
+
+  if (!loader) return;
+
+  setTimeout(() => {
+    loader.classList.add("fade-out");
+  }, 400); // small delay = smoother UX
+});
