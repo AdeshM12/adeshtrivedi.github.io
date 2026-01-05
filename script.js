@@ -22,8 +22,17 @@ function sendEmail(event) {
   );
 
   const body = encodeURIComponent(
-    `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+    `From: ${name} (${email})\n\nMessage:\n${message}`
   );
 
+  const gmailURL =
+    `https://mail.google.com/mail/?view=cm&fs=1&to=adeshtrivedi01@gmail.com&su=${subject}&body=${body}`;
+
+  window.open(gmailURL, "_blank");
+}
+try {
+  window.open(gmailURL, "_blank");
+} catch {
   window.location.href = `mailto:adeshtrivedi01@gmail.com?subject=${subject}&body=${body}`;
 }
+
