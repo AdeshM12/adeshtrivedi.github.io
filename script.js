@@ -62,10 +62,10 @@ function sendEmail(event) {
 /* ===== PAGE LOADER CONTROL ===== */
 window.addEventListener("load", () => {
   const loader = document.getElementById("page-loader");
-
   if (!loader) return;
 
   setTimeout(() => {
     loader.classList.add("fade-out");
-  }, 400); // small delay = smoother UX
+  }, 700); // longer delay for mobile UX
 });
+
