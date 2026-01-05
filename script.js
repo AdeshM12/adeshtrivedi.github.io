@@ -36,16 +36,24 @@ try {
   window.location.href = `mailto:adeshtrivedi01@gmail.com?subject=${subject}&body=${body}`;
 }
 
-const toggle = document.querySelector(".nav-toggle");
-const navLinks = document.querySelector(".nav-links");
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.querySelector(".nav-toggle");
+  const navLinks = document.querySelector(".nav-links");
 
-toggle.addEventListener("click", () => {
-  navLinks.classList.toggle("open");
-});
+  if (!toggle || !navLinks) {
+    console.error("Navbar elements not found");
+    return;
+  }
 
-document.querySelectorAll(".nav-links a").forEach(link => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("open");
+  toggle.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+  });
+
+  // Close menu when clicking a link (mobile UX)
+  navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+    });
   });
 });
 
