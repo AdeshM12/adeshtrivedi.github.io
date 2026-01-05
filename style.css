@@ -1277,3 +1277,156 @@ footer {
   background: rgba(56,189,248,0.15);
   transform: translateY(-2px);
 }
+
+
+/* ===== GLOBAL MOBILE SAFETY ===== */
+
+html, body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* ===== NAVBAR MOBILE ===== */
+
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 0.8rem 1rem;
+  }
+
+  .nav-links {
+    display: none; /* clean mobile look */
+  }
+
+  .logo {
+    font-size: 0.85rem;
+  }
+}
+
+
+
+/* ===== HERO MOBILE ===== */
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 2.5rem 1.2rem 2rem;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .subtitle {
+    font-size: 0.85rem;
+  }
+
+  .hero-circle {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* ===== ABOUT MOBILE ===== */
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .about-points li {
+    font-size: 0.85rem;
+  }
+}
+
+
+/* ===== PIPELINE MOBILE ===== */
+
+@media (max-width: 768px) {
+  .pipeline {
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .stage {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.75rem;
+  }
+
+  .arrow {
+    width: 20px;
+  }
+}
+
+
+/* ===== SKILLS MOBILE ===== */
+
+@media (max-width: 600px) {
+  .skill-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skill-card {
+    padding: 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .skill-card img {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+
+/* ===== EXPERIENCE MOBILE ===== */
+
+@media (max-width: 900px) {
+  .exp-item {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .exp-visual {
+    justify-content: flex-start;
+    overflow-x: auto;
+  }
+
+  .migration-graphic,
+  .jenkins-migration,
+  .forms-upgrade-horizontal,
+  .cups-printing {
+    transform: scale(0.9);
+  }
+}
+
+
+
+/* ===== PROJECTS MOBILE ===== */
+
+@media (max-width: 768px) {
+  #projects .card {
+    padding: 2.5rem 1.2rem;
+  }
+
+  .project-visual {
+    transform: scale(0.85);
+    margin: 1.2rem 0;
+  }
+}
+
+/* ===== CONTACT MOBILE ===== */
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-form button {
+    font-size: 0.85rem;
+  }
+}
