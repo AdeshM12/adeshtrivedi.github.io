@@ -68,4 +68,3 @@ window.addEventListener("load", () => {
     loader.classList.add("fade-out");
   }, 700); // longer delay for mobile UX
 });
-
