@@ -2,73 +2,433 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Adesh Trivedi | DevOps & SRE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
 
+  <title>Adesh Trivedi | DevOps & SRE</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header class="hero">
+
+
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+  <div class="bg-cursor"></div>
+    <span class="logo">ADESH</span>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#pipeline">Pipeline</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-circle"></div>
   <h1>Adesh Trivedi</h1>
   <p class="subtitle">DevOps & Site Reliability Engineer</p>
-
-  <div class="links">
-    <a href="https://github.com/AdeshM12" target="_blank">GitHub</a>
-    <a href="https://linkedin.com/in/adeshtrivedi" target="_blank">LinkedIn</a>
-    <a href="mailto:adeshtrivedi01@gmail.com">Email</a>
+  <div class="hero-links">
+    <a href="https://github.com/AdeshM12" target="_blank" aria-label="GitHub">
+      <i class="fa-brands fa-github"></i>
+    </a>
+  
+    <a href="https://linkedin.com/in/adeshtrivedi" target="_blank" aria-label="LinkedIn">
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+  
+    <a href="mailto:adeshtrivedi01@gmail.com" aria-label="Email">
+      <i class="fa-solid fa-envelope"></i>
+    </a>
   </div>
-</header>
 
-<main>
-
-<section class="about">
-  <h2>About</h2>
-  <p>
-    DevOps and Site Reliability Engineer with nearly 3 years of experience
-    operating enterprise production systems. I design pipelines that move
-    data, jobs, and deployments reliably across infrastructure.
-  </p>
 </section>
 
-<section class="animation-section">
-  <h2>Production Flow</h2>
+<section id="about" class="section about">
+  <h2>About</h2>
 
-  <div class="pipeline-container">
-    <div class="node server">Source Server</div>
-    <div class="node engineer">Engineer</div>
-    <div class="node server">Target Server</div>
+  <div class="about-grid">
+    <ul class="about-points">
+      <li>3+ years production DevOps</li>
+      <li>Enterprise retail systems</li>
+      <li>CI/CD & automation focused</li>
+      <li>Cloud & Linux specialist</li>
+    </ul>
 
-    <canvas id="pipelineCanvas"></canvas>
+    <p>
+      DevOps and Site Reliability Engineer with nearly 3 years of experience
+      supporting large-scale enterprise production systems. Strong focus on
+      CI/CD automation, cloud infrastructure, monitoring, and reliability
+      engineering across multi-region environments.
+    </p>
+  </div>
+</section>
+
+
+<!-- PIPELINE -->
+<section id="pipeline" class="section dark">
+  <h2>CI/CD & Production Flow</h2>
+
+  <div class="pipeline">
+    <div class="stage">Code</div>
+    <div class="arrow"></div>
+    <div class="stage">Build</div>
+    <div class="arrow"></div>
+    <div class="stage">Test</div>
+    <div class="arrow"></div>
+    <div class="stage">Deploy</div>
+    <div class="arrow"></div>
+    <div class="stage highlight">Production</div>
   </div>
 
   <p class="caption">
-    Automated pipelines moving workloads safely across systems
+    Automated pipelines ensuring safe, repeatable, and observable deployments
   </p>
 </section>
 
-<section class="skills">
-  <h2>Core Tooling</h2>
+<section id="skills" class="section">
+  <h2>Skills & Technologies</h2>
 
-  <div class="skills-grid">
-    <span>Jenkins</span>
-    <span>Terraform</span>
-    <span>Ansible</span>
-    <span>Docker</span>
-    <span>Prometheus</span>
-    <span>Grafana</span>
-    <span>Linux</span>
-    <span>GCP</span>
-    <span>OCI</span>
+  <!-- Programming -->
+  <h3 class="skill-category">Programming & Scripting</h3>
+  <div class="skill-grid">
+    <a class="skill-card" href="https://docs.python.org/3/" target="_blank" data-tip="Automation scripts, tooling, and internal utilities">
+      <img src="https://cdn.simpleicons.org/python" />
+      <span>Python</span>
+    </a>
+
+    <a class="skill-card" href="https://www.gnu.org/software/bash/manual/" target="_blank" data-tip="Deployment scripts, automation, server operations">
+      <img src="https://cdn.simpleicons.org/gnubash" />
+      <span>Bash</span>
+    </a>
+
+    <a class="skill-card" href="https://docs.oracle.com/en/database/" target="_blank" data-tip="Enterprise database scripting and automation">
+      <img src="https://cdn.simpleicons.org/oracle" />
+      <span>PL/SQL</span>
+    </a>
+  </div>
+
+  <!-- DevOps -->
+  <h3 class="skill-category">DevOps & CI/CD</h3>
+  <div class="skill-grid">
+    <a class="skill-card" href="https://www.jenkins.io/doc/" target="_blank" data-tip="CI/CD pipelines for build, test, deploy">
+      <img src="https://cdn.simpleicons.org/jenkins" />
+      <span>Jenkins</span>
+    </a>
+
+    <a class="skill-card" href="https://git-scm.com/doc" target="_blank" data-tip="Source control, branching, release workflows">
+      <img src="https://cdn.simpleicons.org/git" />
+      <span>Git</span>
+    </a>
+
+    <a class="skill-card" href="https://docs.docker.com/" target="_blank" data-tip="Containerized environments for automation and testing">
+      <img src="https://cdn.simpleicons.org/docker" />
+      <span>Docker</span>
+    </a>
+  </div>
+
+  <!-- Cloud -->
+  <h3 class="skill-category">Cloud Platforms</h3>
+  <div class="skill-grid">
+    <a class="skill-card" href="https://docs.oracle.com/en-us/iaas/Content/home.htm" target="_blank" data-tip="OCI compute, networking, Linux workloads">
+      <img src="https://cdn.simpleicons.org/oracle" />
+      <span>Oracle Cloud (OCI)</span>
+    </a>
+
+    <a class="skill-card" href="https://cloud.google.com/docs" target="_blank" data-tip="GCP compute, networking, cloud services">
+      <img src="https://cdn.simpleicons.org/googlecloud" />
+      <span>Google Cloud (GCP)</span>
+    </a>
+  </div>
+
+  <!-- IaC -->
+  <h3 class="skill-category">Infrastructure as Code & Automation</h3>
+  <div class="skill-grid">
+    <a class="skill-card" href="https://developer.hashicorp.com/terraform/docs" target="_blank" data-tip="Infrastructure provisioning and lifecycle management">
+      <img src="https://cdn.simpleicons.org/terraform" />
+      <span>Terraform</span>
+    </a>
+
+    <a class="skill-card" href="https://docs.ansible.com/" target="_blank" data-tip="Configuration management and automation">
+      <img src="https://cdn.simpleicons.org/ansible" />
+      <span>Ansible</span>
+    </a>
+
+    <a class="skill-card" href="https://docs.bmc.com/docs/controlm" target="_blank" data-tip="Enterprise job scheduling & workload automation">
+      <img src="https://cdn.simpleicons.org/controlm" />
+      <span>BMC Control-M</span>
+    </a>
+  </div>
+
+  <!-- Monitoring -->
+  <h3 class="skill-category">Monitoring & Reliability</h3>
+  <div class="skill-grid">
+    <a class="skill-card" href="https://prometheus.io/docs/" target="_blank" data-tip="Metrics, alerting, and monitoring">
+      <img src="https://cdn.simpleicons.org/prometheus" />
+      <span>Prometheus</span>
+    </a>
+
+    <a class="skill-card" href="https://grafana.com/docs/" target="_blank" data-tip="Dashboards and visualization">
+      <img src="https://cdn.simpleicons.org/grafana" />
+      <span>Grafana</span>
+    </a>
+
+    <a class="skill-card" href="https://checkmk.com/product/documentation" target="_blank" data-tip="Infrastructure and service monitoring">
+      <img src="https://cdn.simpleicons.org/checkmk" />
+      <span>CheckMK</span>
+    </a>
+  </div>
+
+  <!-- Systems -->
+  <h3 class="skill-category">Systems & OS</h3>
+  <div class="skill-grid">
+    <a class="skill-card" href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/" target="_blank" data-tip="Production Linux servers">
+      <img src="https://cdn.simpleicons.org/linux" />
+      <span>RHEL</span>
+    </a>
+
+    <a class="skill-card" href="https://help.ubuntu.com/" target="_blank" data-tip="Cloud & VM environments">
+      <img src="https://cdn.simpleicons.org/ubuntu" />
+      <span>Ubuntu</span>
+    </a>
+  </div>
+
+</section>
+
+<section id="experience" class="section dark">
+  <h2>Professional Experience — Metro AG Retail (Wipro)</h2>
+
+  <div class="experience-block">
+
+    <!-- Retail Ops -->
+    <div class="exp-item">
+      <div class="exp-text">
+        <h3>Retail Operations & SLA Management</h3>
+        <p>
+          Managed Metro AG store applications including patch deployments,
+          incident resolution, and continuous SLA compliance above 99%
+          across 300+ retail locations.
+        </p>
+      </div>
+      <div class="exp-visual">
+        <div class="stores">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- On-call -->
+    <div class="exp-item">
+      <div class="exp-text">
+        <h3>24×7 On-Call & Incident Management</h3>
+        <p>
+          Served as on-call engineer handling P1/P2 incidents,
+          performing root-cause analysis and restoring services
+          under strict SLAs.
+        </p>
+      </div>
+      <div class="exp-visual">
+        <div class="incident-flow">
+          <span class="alert">!</span>
+          <span class="analyze">RCA</span>
+          <span class="resolve">✔</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Control-M Migration -->
+    <div class="exp-item">
+  <div class="exp-text">
+    <h3>Enterprise Scheduler Migration (On-Prem → Cloud)</h3>
+    <p>
+      Migrated enterprise scheduling workloads from legacy IBM AIX systems
+      to Oracle Cloud Infrastructure Linux environments, improving reliability
+      and reducing manual intervention.
+    </p>
+  </div>
+
+  <div class="exp-visual migration-graphic">
+    <div class="server">
+      <img src="https://cdn.simpleicons.org/ibm" alt="IBM AIX">
+      <span>IBM AIX</span>
+    </div>
+
+    <div class="engineer-node">
+      <img src="https://cdn.simpleicons.org/linux" alt="Engineer">
+      <span>Engineer</span>
+    </div>
+
+    <div class="server">
+      <img src="https://cdn.simpleicons.org/oracle" alt="Oracle OCI">
+      <span>Oracle OCI</span>
+    </div>
+
+    <!-- animated packets -->
+    <span class="packet p1"></span>
+    <span class="packet p2"></span>
+    <span class="packet p3"></span>
+  </div>
+</div>
+
+
+    <!-- SQL Automation -->
+    <div class="exp-item">
+      <div class="exp-text">
+        <h3>SQL Deployment Automation</h3>
+        <p>
+          Automated SQL script deployments across multiple schemas
+          using Control-M and Bash, reducing manual effort and
+          deployment errors.
+        </p>
+      </div>
+      <div class="exp-visual">
+        <div class="scripts">
+          <span>{ }</span><span>{ }</span><span>{ }</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Jenkins Migration -->
+    <div class="exp-item">
+      <div class="exp-text">
+        <h3>Jenkins Server Migration & CI/CD Enablement</h3>
+        <p>
+          Migrated Jenkins servers from AIX to OCI Linux, optimized
+          Bash scripts for Linux compatibility, and enabled
+          stable CI/CD automation.
+        </p>
+      </div>
+      <div class="exp-visual">
+        <div class="ci-move">
+          <span>Jenkins</span>
+          <div class="flow-line"></div>
+          <span>OCI</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- JBoss Containers -->
+    <div class="exp-item">
+      <div class="exp-text">
+        <h3>Enterprise Application & Container Migration</h3>
+        <p>
+          Maintained and migrated JBoss / Apache-based enterprise
+          applications from OCI to Adani RHEL servers ensuring
+          high availability and configuration consistency.
+        </p>
+      </div>
+      <div class="exp-visual">
+        <div class="containers">
+          <span></span><span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Oracle Forms -->
+    <div class="exp-item">
+      <div class="exp-text">
+        <h3>Oracle Forms Upgrade (12c → 14c)</h3>
+        <p>
+          Executed Oracle Forms upgrades using Jenkins pipelines,
+          automating build and deployment processes.
+        </p>
+      </div>
+      <div class="exp-visual">
+        <div class="upgrade">
+          <span>12c</span><span>→</span><span>14c</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Printing -->
+    <div class="exp-item">
+      <div class="exp-text">
+        <h3>GCP / RHEL CUPS Printing Infrastructure</h3>
+        <p>
+          Migrated and maintained GCP and RHEL-based CUPS servers
+          providing printing services across 300+ retail stores.
+        </p>
+      </div>
+      <div class="exp-visual">
+        <div class="print-fan">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Monitoring -->
+    <div class="exp-item">
+      <div class="exp-text">
+        <h3>Monitoring, Scheduling & Proactive Alerting</h3>
+        <p>
+          Monitored scheduled jobs and infrastructure using
+          Control-M and CheckMK with proactive alerting and
+          dashboards for anomaly detection.
+        </p>
+      </div>
+      <div class="exp-visual">
+        <div class="monitoring">
+          <div class="pulse"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Collaboration -->
+    <div class="exp-item">
+      <div class="exp-text">
+        <h3>Cross-Functional Cloud Delivery</h3>
+        <p>
+          Collaborated with cross-functional teams to deliver
+          cloud migrations and infrastructure enhancements
+          while consistently meeting SLA targets.
+        </p>
+      </div>
+      <div class="exp-visual">
+        <div class="collab">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
-</main>
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <h2>Projects</h2>
+
+  <div class="card">
+    <h3>Employee Management Portal</h3>
+    <p>
+      Python-based desktop application built with Tkinter and SQLite,
+      featuring role-based access control and automated Google Drive backups.
+    </p>
+    <a href="https://github.com/AdeshM12" target="_blank">View Code</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section dark">
+  <h2>Contact</h2>
+  <p class="center">
+    Email: <a href="mailto:adeshtrivedi01@gmail.com">adeshtrivedi01@gmail.com</a>
+  </p>
+</section>
 
 <footer>
   <p>© 2026 Adesh Trivedi</p>
 </footer>
 
-<script src="animation.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
