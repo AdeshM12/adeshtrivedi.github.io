@@ -1700,3 +1700,83 @@ img {
     margin-top: 1rem;
   }
 }
+
+
+/* ===== AUTOMATION PROJECT ===== */
+
+.automation-project .project-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.project-animation {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.project-animation img {
+  width: 28px;
+  filter: invert(1);
+}
+
+/* Flow line */
+.project-flow {
+  position: relative;
+  width: 60px;
+  height: 4px;
+  background: #1f2937;
+  overflow: hidden;
+}
+
+/* Metrics packets */
+.project-flow span {
+  position: absolute;
+  top: 0;
+  width: 14px;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #22c55e,
+    transparent
+  );
+  animation: metricsFlow 1.6s infinite;
+  opacity: 0;
+}
+
+.project-flow span:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.project-flow span:nth-child(3) {
+  animation-delay: 1s;
+}
+
+@keyframes metricsFlow {
+  0% {
+    left: -14px;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .automation-project .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-animation {
+    transform: scale(0.9);
+  }
+}
