@@ -75,19 +75,33 @@ a {
 }
 
 /* SECTIONS */
+/* ===== SECTION SPACING NORMALIZATION ===== */
+
 .section {
-  max-width: 1100px;
-  margin: auto;
   padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .section.dark {
-  background: #020617;
+  padding: 4rem 2rem;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 6, 23, 0.85),
+    rgba(2, 6, 23, 0.95)
+  );
+  
+}
+.section.dark {
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.02),
+              inset 0 -1px 0 rgba(255,255,255,0.02);
 }
 
-h2 {
-  color: #f9fafb;
+
+.section h2 {
+  margin-bottom: 2rem;
 }
+
 
 .center {
   max-width: 800px;
@@ -307,13 +321,26 @@ h2 {
   100% { opacity: 1; }
 }
 
-/* CARDS */
+/* BASE CARD (GLOBAL) */
 .card {
-  background: #020617;
-  padding: 1.6rem;
-  border-radius: 10px;
-  border: 1px solid #1f2937;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2.2rem;
+  border-radius: 14px;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 6, 23, 0.85),
+    rgba(2, 6, 23, 0.95)
+  );
+
 }
+#projects .card{
+  max-width: 1400px;
+  padding: 4rem 2rem;
+  border-radius: 18px;
+}
+
+
 
 .date {
   font-size: 0.85rem;
@@ -1080,5 +1107,102 @@ footer {
 @media (max-width: 768px) {
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+
+/* ===== PROJECT: EMPLOYEE MANAGEMENT ANIMATION ===== */
+
+.project-card {
+  position: relative;
+}
+
+.project-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0 1.2rem;
+}
+
+/* Nodes */
+.proj-node {
+  width: 100px;
+  text-align: center;
+  font-size: 0.7rem;
+  opacity: 0.85;
+}
+
+/* Labels */
+.proj-node small {
+  opacity: 0.7;
+}
+.proj-node img {
+  width: 26px;
+  height: 26px;
+  filter: invert(1);
+  opacity: 0.9;
+}
+
+/* Flow line */
+.proj-flow {
+  position: relative;
+  width: 50px;
+  height: 4px;
+  background: #1f2937;
+  overflow: hidden;
+}
+
+/* Moving dots (data records) */
+.proj-flow .dot {
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #38bdf8,
+    transparent
+  );
+  animation: projectFlow 2s infinite;
+  opacity: 0;
+}
+
+.proj-flow .dot:nth-child(2) { animation-delay: 0.6s; }
+.proj-flow .dot:nth-child(3) { animation-delay: 1.2s; }
+
+@keyframes projectFlow {
+  0% {
+    left: -10px;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+/* Node pulse */
+.proj-node span {
+  animation: nodePulse 3s infinite;
+}
+
+@keyframes nodePulse {
+  0%,100% {
+    box-shadow: none;
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(56,189,248,0.35);
+  }
+}
+
+/* Mobile safety */
+@media (max-width: 600px) {
+  .project-visual {
+    transform: scale(0.9);
   }
 }
