@@ -206,7 +206,7 @@ a {
 
 .tool img {
   width: 22px;
-  filter: invert(1);
+  filter: invert(0);
 }
 /* EXPERIENCE VISUALS */
 
@@ -426,7 +426,7 @@ footer {
 .skill-card img {
   width: 28px;
   height: 28px;
-  filter: invert(1);
+  filter: invert(0);
 }
 
 /* TOOLTIP */
@@ -595,7 +595,7 @@ footer {
 .engineer-node img {
   width: 36px;
   height: 36px;
-  filter: invert(1);
+  filter: invert(0);
 }
 
 .server span,
@@ -610,7 +610,7 @@ footer {
 
 .packet {
   position: absolute;
-  top: 50%;
+  top: 35%;
   width: 6px;
   height: 6px;
   background: #38bdf8;
@@ -624,24 +624,26 @@ footer {
 
 @keyframes movePacket {
   0% {
-    left: 15%;
+    left: 20%;
     opacity: 0;
   }
-  20% {
+  25% {
     opacity: 1;
   }
   50% {
     left: 50%;
     opacity: 1;
   }
-  80% {
+  75% {
     opacity: 1;
   }
   100% {
-    left: 85%;
+    left: 80%;
     opacity: 0;
   }
 }
+
+
 .logo {
   font-weight: 600;
   letter-spacing: 0.15em;
@@ -773,7 +775,7 @@ footer {
 
 .forms-version img {
   width: 22px;
-  filter: invert(1);
+  filter: invert(0);
   margin-bottom: 0.3rem;
 }
 
@@ -853,7 +855,7 @@ footer {
 
 .ci-node img {
   width: 24px;
-  filter: invert(1);
+  filter: invert(0);
   margin-bottom: 0.3rem;
 }
 
@@ -999,7 +1001,7 @@ footer {
 
 .print-source img {
   width: 22px;
-  filter: invert(1);
+  filter: invert(0);
   margin: 0 4px;
 }
 
@@ -1153,10 +1155,26 @@ footer {
 
 /* Mobile */
 @media (max-width: 768px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
+  .migration-graphic {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  @keyframes movePacket {
+    0% {
+      left: 25%;
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    100% {
+      left: 75%;
+      opacity: 0;
+    }
   }
 }
+
 
 
 /* ===== PROJECT: EMPLOYEE MANAGEMENT ANIMATION ===== */
@@ -1188,7 +1206,7 @@ footer {
 .proj-node img {
   width: 26px;
   height: 26px;
-  filter: invert(1);
+  filter: invert(0);
   opacity: 0.9;
 }
 
