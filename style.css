@@ -1,96 +1,186 @@
 body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-        margin: 0;
-          background: #0f172a;
-            color: #e5e7eb;
-              line-height: 1.6;
-              }
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+  line-height: 1.6;
+}
 
-              a {
-                color: #38bdf8;
-                  text-decoration: none;
-                  }
+h1, h2, h3 {
+  color: #f8fafc;
+}
 
-                  h1, h2, h3 {
-                    color: #f8fafc;
-                    }
+a {
+  color: #38bdf8;
+  text-decoration: none;
+}
 
-                    .hero {
-                      text-align: center;
-                        padding: 4rem 1rem;
-                          background: #020617;
-                            position: sticky;
-                              top: 0;
-                                z-index: 10;
-                                }
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: #020617;
+}
 
-                                .subtitle {
-                                  font-size: 1.2rem;
-                                    opacity: 0.9;
-                                    }
+.subtitle {
+  opacity: 0.85;
+}
 
-                                    .links a {
-                                      margin: 0 0.8rem;
-                                        font-weight: 500;
-                                        }
+.links a {
+  margin: 0 0.8rem;
+}
 
-                                        .btn {
-                                          display: inline-block;
-                                            margin-top: 1.2rem;
-                                              padding: 0.6rem 1.3rem;
-                                                border: 1px solid #38bdf8;
-                                                  border-radius: 8px;
-                                                    color: #38bdf8;
-                                                    }
+.btn {
+  display: inline-block;
+  margin-top: 1.2rem;
+  padding: 0.6rem 1.3rem;
+  border: 1px solid #38bdf8;
+  border-radius: 8px;
+  color: #38bdf8;
+}
 
-                                                    section {
-                                                      max-width: 900px;
-                                                        margin: auto;
-                                                          padding: 3rem 1.5rem;
-                                                          }
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 3rem 1.5rem;
+}
 
-                                                          .grid {
-                                                            display: grid;
-                                                              grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-                                                                gap: 1.5rem;
-                                                                }
+.card {
+  background: #020617;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px #1e293b;
+}
 
-                                                                .card {
-                                                                  background: #020617;
-                                                                    padding: 1.5rem;
-                                                                      border-radius: 10px;
-                                                                        box-shadow: 0 0 0 1px #1e293b;
-                                                                        }
+.date {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
 
-                                                                        .card h3 {
-                                                                          display: flex;
-                                                                            align-items: center;
-                                                                              gap: 0.5rem;
-                                                                              }
+ul {
+  padding-left: 1.2rem;
+}
 
-                                                                              .tags {
-                                                                                font-size: 0.85rem;
-                                                                                  opacity: 0.85;
-                                                                                    margin-bottom: 0.6rem;
-                                                                                    }
+/* 🔁 PIPELINE ANIMATION */
 
-                                                                                    .date {
-                                                                                      font-size: 0.9rem;
-                                                                                        opacity: 0.7;
-                                                                                        }
+.animation-section {
+  text-align: center;
+}
 
-                                                                                        ul {
-                                                                                          padding-left: 1.2rem;
-                                                                                          }
+.pipeline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2.5rem 0;
+  flex-wrap: wrap;
+}
 
-                                                                                          i {
-                                                                                            color: #38bdf8;
-                                                                                            }
+.server {
+  background: #020617;
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 0 0 1px #1e293b;
+}
 
-                                                                                            footer {
-                                                                                              text-align: center;
-                                                                                                padding: 2rem;
-                                                                                                  font-size: 0.9rem;
-                                                                                                    opacity: 0.6;
-                                                                                                    }
+.engineer {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.engineer span {
+  display: block;
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.flow {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: #38bdf8;
+  border-radius: 50%;
+  animation: move 1.5s infinite ease-in-out;
+  opacity: 0;
+}
+
+.dot:nth-child(2) { animation-delay: 0.3s; }
+.dot:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes move {
+  0% { opacity: 0; transform: translateX(0); }
+  40% { opacity: 1; }
+  70% { transform: translateX(14px); }
+  100% { opacity: 0; transform: translateX(22px); }
+}
+
+.animation-caption {
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+/* 🧰 TOOLS */
+
+.tool-group-title {
+  margin-top: 2.5rem;
+  font-size: 1.1rem;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.2rem;
+}
+
+.tool {
+  background: #020617;
+  padding: 1.2rem;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 0 0 1px #1e293b;
+}
+
+.tool img {
+  width: 38px;
+  height: 38px;
+  margin-bottom: 0.6rem;
+  filter: invert(1);
+}
+
+.tool span {
+  font-size: 0.9rem;
+}
+
+/* Tooltip */
+
+.tool::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: -2.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #020617;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: 0 0 0 1px #1e293b;
+}
+
+.tool:hover::after {
+  opacity: 1;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.85rem;
+  opacity: 0.6;
 }
