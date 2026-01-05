@@ -79,17 +79,34 @@
 <section id="pipeline" class="section dark">
   <h2>CI/CD & Production Flow</h2>
 
-  <div class="pipeline">
-    <div class="stage">Code</div>
-    <div class="arrow"></div>
-    <div class="stage">Build</div>
-    <div class="arrow"></div>
-    <div class="stage">Test</div>
-    <div class="arrow"></div>
-    <div class="stage">Deploy</div>
-    <div class="arrow"></div>
-    <div class="stage highlight">Production</div>
+<div class="pipeline animated-pipeline">
+  <div class="stage">Code</div>
+
+  <div class="arrow">
+    <span class="flow"></span>
   </div>
+
+  <div class="stage">Build</div>
+
+  <div class="arrow">
+    <span class="flow"></span>
+  </div>
+
+  <div class="stage">Test</div>
+
+  <div class="arrow">
+    <span class="flow"></span>
+  </div>
+
+  <div class="stage">Deploy</div>
+
+  <div class="arrow">
+    <span class="flow"></span>
+  </div>
+
+  <div class="stage highlight">Production</div>
+</div>
+
 
   <p class="caption">
     Automated pipelines ensuring safe, repeatable, and observable deployments
@@ -113,7 +130,7 @@
     </a>
 
     <a class="skill-card" href="https://docs.oracle.com/en/database/" target="_blank" data-tip="Enterprise database scripting and automation">
-      <img src="https://cdn.simpleicons.org/oracle" />
+      <img src="https://www.oracle.com/a/ocom/img/pl-sql.svg?viewbox=auto&size=30" />
       <span>PL/SQL</span>
     </a>
   </div>
@@ -141,8 +158,8 @@
   <h3 class="skill-category">Cloud Platforms</h3>
   <div class="skill-grid">
     <a class="skill-card" href="https://docs.oracle.com/en-us/iaas/Content/home.htm" target="_blank" data-tip="OCI compute, networking, Linux workloads">
-      <img src="https://cdn.simpleicons.org/oracle" />
-      <span>Oracle Cloud (OCI)</span>
+      <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/oracle-cloud.svg" />
+      <span>Oracle Cloud Infrastructure (OCI)</span>
     </a>
 
     <a class="skill-card" href="https://cloud.google.com/docs" target="_blank" data-tip="GCP compute, networking, cloud services">
@@ -165,7 +182,7 @@
     </a>
 
     <a class="skill-card" href="https://docs.bmc.com/docs/controlm" target="_blank" data-tip="Enterprise job scheduling & workload automation">
-      <img src="https://cdn.simpleicons.org/controlm" />
+      <img src="https://www.bmc.com/content/dam/bmc/graphics/bmc-logo.svg" />
       <span>BMC Control-M</span>
     </a>
   </div>
@@ -206,7 +223,7 @@
 </section>
 
 <section id="experience" class="section dark">
-  <h2>Professional Experience — Metro AG Retail (Wipro)</h2>
+  <h2>Professional Experience —Wipro</h2>
 
   <div class="experience-block">
 
@@ -215,7 +232,7 @@
       <div class="exp-text">
         <h3>Retail Operations & SLA Management</h3>
         <p>
-          Managed Metro AG store applications including patch deployments,
+          Managed retail store applications including patch deployments,
           incident resolution, and continuous SLA compliance above 99%
           across 300+ retail locations.
         </p>
@@ -259,17 +276,17 @@
 
   <div class="exp-visual migration-graphic">
     <div class="server">
-      <img src="https://cdn.simpleicons.org/ibm" alt="IBM AIX">
+      <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/linuxserver-io.png" alt="IBM AIX">
       <span>IBM AIX</span>
     </div>
 
     <div class="engineer-node">
-      <img src="https://cdn.simpleicons.org/linux" alt="Engineer">
-      <span>Engineer</span>
+      <img src="https://cdn.simpleicons.org/linux" alt="">
+      <span></span>
     </div>
 
     <div class="server">
-      <img src="https://cdn.simpleicons.org/oracle" alt="Oracle OCI">
+      <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/oracle-cloud.png" alt="Oracle OCI">
       <span>Oracle OCI</span>
     </div>
 
@@ -308,13 +325,27 @@
           stable CI/CD automation.
         </p>
       </div>
-      <div class="exp-visual">
-        <div class="ci-move">
-          <span>Jenkins</span>
-          <div class="flow-line"></div>
-          <span>OCI</span>
-        </div>
-      </div>
+<div class="exp-visual jenkins-migration">
+  <!-- Source -->
+  <div class="ci-node old">
+    <img src="https://cdn.simpleicons.org/jenkins" alt="Jenkins">
+    <span>Jenkins (AIX)</span>
+  </div>
+
+  <!-- Migration flow -->
+  <div class="ci-flow">
+    <span class="packet"></span>
+    <span class="packet"></span>
+    <span class="packet"></span>
+  </div>
+
+  <!-- Target -->
+  <div class="ci-node new">
+    <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/oracle-cloud.png" alt="OCI">
+    <span>OCI Linux</span>
+  </div>
+</div>
+
     </div>
 
     <!-- JBoss Containers -->
@@ -335,20 +366,34 @@
     </div>
 
     <!-- Oracle Forms -->
-    <div class="exp-item">
-      <div class="exp-text">
-        <h3>Oracle Forms Upgrade (12c → 14c)</h3>
-        <p>
-          Executed Oracle Forms upgrades using Jenkins pipelines,
-          automating build and deployment processes.
-        </p>
-      </div>
-      <div class="exp-visual">
-        <div class="upgrade">
-          <span>12c</span><span>→</span><span>14c</span>
-        </div>
-      </div>
+<div class="exp-item">
+  <div class="exp-text">
+    <h3>Oracle Forms Upgrade (12c → 14c)</h3>
+    <p>
+      Executed Oracle Forms upgrades using Jenkins pipelines,
+      automating build, deployment, and validation processes.
+    </p>
+  </div>
+
+  <div class="exp-visual forms-upgrade">
+    <div class="forms-version old">
+      <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/oracle-cloud.png" alt="Oracle">
+      <span>Forms 12c</span>
     </div>
+
+    <div class="upgrade-pipe">
+      <span class="flow"></span>
+      <span class="flow"></span>
+      <span class="flow"></span>
+    </div>
+
+    <div class="forms-version new">
+      <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/oracle-cloud.png" alt="Oracle">
+      <span>Forms 14c</span>
+    </div>
+  </div>
+</div>
+
 
     <!-- Printing -->
     <div class="exp-item">
@@ -359,11 +404,28 @@
           providing printing services across 300+ retail stores.
         </p>
       </div>
-      <div class="exp-visual">
-        <div class="print-fan">
-          <span></span><span></span><span></span>
-        </div>
-      </div>
+      <div class="exp-visual cups-printing">
+  <!-- Source server -->
+  <div class="print-source">
+    <img src="https://cdn.simpleicons.org/googlecloud" alt="GCP">
+    <img src="https://cdn.simpleicons.org/redhat" alt="RHEL">
+    <span>CUPS Server</span>
+  </div>
+
+  <!-- Flow -->
+  <div class="print-flow">
+    <span class="job"></span>
+    <span class="job"></span>
+    <span class="job"></span>
+  </div>
+
+  <!-- Stores -->
+  <div class="print-stores">
+    <div class="store"></div>
+    <div class="store"></div>
+    <div class="store"></div>
+  </div>
+</div>
     </div>
 
     <!-- Monitoring -->
@@ -417,13 +479,68 @@
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="section dark">
-  <h2>Contact</h2>
-  <p class="center">
-    Email: <a href="mailto:adeshtrivedi01@gmail.com">adeshtrivedi01@gmail.com</a>
+<section id="contact" class="section dark contact">
+  <h2>Get in Touch</h2>
+
+  <p class="contact-intro">
+    Feel free to reach out!!
   </p>
+
+  <div class="contact-grid">
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <p>
+        <i class="fa-solid fa-envelope"></i>
+        <a href="mailto:adeshtrivedi01@gmail.com">
+          adeshtrivedi01@gmail.com
+        </a>
+      </p>
+
+      <p>
+        <i class="fa-brands fa-github"></i>
+        <a href="https://github.com/AdeshM12" target="_blank">
+          github.com/AdeshM12
+        </a>
+      </p>
+
+      <p>
+        <i class="fa-brands fa-linkedin"></i>
+        <a href="https://linkedin.com/in/adeshtrivedi" target="_blank">
+          linkedin.com/in/adeshtrivedi
+        </a>
+      </p>
+    </div>
+
+    <!-- Contact Form -->
+    <form class="contact-form" onsubmit="sendEmail(event)">
+      <input
+        type="text"
+        id="name"
+        placeholder="Your Name"
+        required
+      />
+
+      <input
+        type="email"
+        id="email"
+        placeholder="Your Email"
+        required
+      />
+
+      <textarea
+        id="message"
+        rows="5"
+        placeholder="Your message..."
+        required
+      ></textarea>
+
+      <button type="submit">
+        Send Message
+      </button>
+    </form>
+  </div>
 </section>
+
 
 <footer>
   <p>© 2026 Adesh Trivedi</p>

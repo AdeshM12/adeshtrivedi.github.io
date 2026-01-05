@@ -6,6 +6,10 @@ body {
   background: #0b0e14;
   color: #d1d5db;
 }
+section, nav, footer {
+  position: relative;
+  z-index: 1;
+}
 
 a {
   color: #9ca3af;
@@ -673,4 +677,408 @@ footer {
 .hero-links a:hover {
   color: #38bdf8;
   transform: translateY(-2px);
+}
+/* ===== ORACLE FORMS UPGRADE — LEFT TO RIGHT ===== */
+
+.forms-upgrade-horizontal {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Version blocks */
+.forms-version {
+  width: 120px;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #1f2937;
+  background: #020617;
+  text-align: center;
+}
+
+.forms-version img {
+  width: 22px;
+  filter: invert(1);
+  margin-bottom: 0.3rem;
+}
+
+.forms-version span {
+  font-size: 0.75rem;
+  opacity: 0.85;
+}
+
+/* Highlight upgraded version */
+.forms-version.new {
+  border-color: #ef4444; /* Oracle red */
+}
+
+/* Upgrade pipeline line */
+.upgrade-line {
+  position: relative;
+  width: 60px;
+  height: 4px;
+  background: #1f2937;
+  overflow: hidden;
+}
+
+/* Flow packets */
+.upgrade-line .flow {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 14px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #ef4444,
+    transparent
+  );
+  animation: upgradeFlowLR 1.6s infinite;
+  opacity: 0;
+}
+
+.upgrade-line .flow:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.upgrade-line .flow:nth-child(3) {
+  animation-delay: 1s;
+}
+
+@keyframes upgradeFlowLR {
+  0% {
+    left: -14px;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+/* ===== JENKINS SERVER MIGRATION (AIX → OCI) ===== */
+
+.jenkins-migration {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* CI nodes */
+.ci-node {
+  width: 130px;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #1f2937;
+  background: #020617;
+  text-align: center;
+}
+
+.ci-node img {
+  width: 24px;
+  filter: invert(1);
+  margin-bottom: 0.3rem;
+}
+
+.ci-node span {
+  font-size: 0.75rem;
+  opacity: 0.85;
+}
+
+/* Highlight new platform */
+.ci-node.new {
+  border-color: #38bdf8; /* cloud blue */
+}
+
+/* Flow line */
+.ci-flow {
+  position: relative;
+  width: 70px;
+  height: 4px;
+  background: #1f2937;
+  overflow: hidden;
+}
+
+/* Animated packets */
+.ci-flow .packet {
+  position: absolute;
+  top: 0;
+  width: 14px;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #38bdf8,
+    transparent
+  );
+  animation: ciFlowLR 1.6s infinite;
+  opacity: 0;
+}
+
+.ci-flow .packet:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.ci-flow .packet:nth-child(3) {
+  animation-delay: 1s;
+}
+
+@keyframes ciFlowLR {
+  0% {
+    left: -14px;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+/* ===== CI/CD PIPELINE ANIMATION ===== */
+
+.animated-pipeline {
+  position: relative;
+}
+
+/* Arrow base */
+.arrow {
+  position: relative;
+  width: 60px;
+  height: 2px;
+  background: rgba(56, 189, 248, 0.25);
+  overflow: hidden;
+}
+
+/* Moving flow */
+.arrow .flow {
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 20px;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #38bdf8,
+    transparent
+  );
+  animation: pipelineFlow 2.2s infinite linear;
+}
+
+/* Stagger animation so it feels progressive */
+.arrow:nth-of-type(2) .flow { animation-delay: 0s; }
+.arrow:nth-of-type(4) .flow { animation-delay: 0.4s; }
+.arrow:nth-of-type(6) .flow { animation-delay: 0.8s; }
+.arrow:nth-of-type(8) .flow { animation-delay: 1.2s; }
+
+/* Flow motion */
+@keyframes pipelineFlow {
+  0% {
+    left: -20px;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+/* Subtle stage activation */
+.stage {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.animated-pipeline:hover .stage {
+  border-color: rgba(56, 189, 248, 0.6);
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.15);
+}
+
+/* Production stays strong */
+.stage.highlight {
+  box-shadow: 0 0 14px rgba(56, 189, 248, 0.35);
+}
+/* ===== GCP / RHEL CUPS PRINTING (FAN-OUT) ===== */
+
+.cups-printing {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Source */
+.print-source {
+  width: 140px;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #1f2937;
+  background: #020617;
+  text-align: center;
+}
+
+.print-source img {
+  width: 22px;
+  filter: invert(1);
+  margin: 0 4px;
+}
+
+.print-source span {
+  display: block;
+  font-size: 0.7rem;
+  opacity: 0.85;
+  margin-top: 0.3rem;
+}
+
+/* Flow line */
+.print-flow {
+  position: relative;
+  width: 60px;
+  height: 4px;
+  background: #1f2937;
+  overflow: hidden;
+}
+
+/* Print jobs */
+.print-flow .job {
+  position: absolute;
+  top: 0;
+  width: 14px;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #22c55e,
+    transparent
+  );
+  animation: printFlow 1.6s infinite;
+  opacity: 0;
+}
+
+.print-flow .job:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.print-flow .job:nth-child(3) {
+  animation-delay: 1s;
+}
+
+@keyframes printFlow {
+  0% {
+    left: -14px;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+/* Stores */
+.print-stores {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.print-stores .store {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #22c55e;
+  border-radius: 3px;
+  animation: storePulse 1.8s infinite;
+  opacity: 0.6;
+}
+
+.print-stores .store:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.print-stores .store:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+@keyframes storePulse {
+  0%,100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+/* ===== CONTACT SECTION ===== */
+
+.contact-intro {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  opacity: 0.85;
+  text-align: center;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Contact info */
+.contact-info p {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.contact-info i {
+  margin-right: 0.6rem;
+  color: #38bdf8;
+}
+
+/* Form */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  background: #020617;
+  border: 1px solid #1f2937;
+  border-radius: 6px;
+  color: #e5e7eb;
+  font-size: 0.9rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #38bdf8;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 0.75rem;
+  background: #38bdf8;
+  color: #020617;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.contact-form button:hover {
+  background: #0ea5e9;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
 }
